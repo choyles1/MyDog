@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Craig Hoyles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+```
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0e0e0e;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(180, 140, 80, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(180, 140, 80, 0.05) 0%, transparent 50%);
+  font-family: 'Montserrat', sans-serif;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 360px;
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  border-radius: 2px;
+  padding: 48px 36px 40px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeUp 0.8s ease both;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #b48c50, transparent);
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; right: -60px;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  border: 1px solid rgba(180, 140, 80, 0.08);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.monogram {
+  width: 56px;
+  height: 56px;
+  border: 1px solid #b48c50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  animation: fadeUp 0.8s 0.1s ease both;
+}
+
+.monogram span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: #b48c50;
+  letter-spacing: 1px;
+}
+
+.name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: #f0ece4;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  margin-bottom: 6px;
+  animation: fadeUp 0.8s 0.15s ease both;
+}
+
+.divider {
+  width: 32px;
+  height: 1px;
+  background: #b48c50;
+  margin: 18px 0 24px;
+  animation: fadeUp 0.8s 0.2s ease both;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  animation: fadeUp 0.8s ease both;
+}
+
+.contact-item:nth-child(1) { animation-delay: 0.25s; }
+.contact-item:nth-child(2) { animation-delay: 0.32s; }
+.contact-item:nth-child(3) { animation-delay: 0.39s; }
+
+.icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  opacity: 0.5;
+  fill: #b48c50;
+}
+
+.contact-text {
+  font-size: 13px;
+  font-weight: 300;
+  color: #a09890;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a.contact-text:hover { color: #b48c50; }
+
+.save-btn {
+  display: block;
+  width: 100%;
+  margin-top: 36px;
+  padding: 14px;
+  background: transparent;
+  border: 1px solid #2a2a2a;
+  border-radius: 1px;
+  color: #b48c50;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  animation: fadeUp 0.8s 0.45s ease both;
+  text-decoration: none;
+  text-align: center;
+}
+
+.save-btn:hover {
+  background: rgba(180, 140, 80, 0.06);
+  border-color: #b48c50;
+}
+```
+
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <div class="monogram"><span>CH</span></div>
+
+  <h1 class="name">Craig<br>Hoyles</h1>
+
+  <div class="divider"></div>
+
+  <ul class="contact-list">
+    <li class="contact-item">
+      <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+      </svg>
+      <span class="contact-text">Katy, TX 77494</span>
+    </li>
+    <li class="contact-item">
+      <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/>
+      </svg>
+      <a class="contact-text" href="tel:6145920918">614-592-0918</a>
+    </li>
+    <li class="contact-item">
+      <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+      </svg>
+      <a class="contact-text" href="mailto:Choyles@gmail.com">Choyles@gmail.com</a>
+    </li>
+  </ul>
+
+  <a class="save-btn" href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3ACraig%20Hoyles%0AN%3AHoyles%3BCraig%3B%3B%3B%0AADR%3B%3B%3B%3BKaty%3BTX%3B77494%3BUSA%0ATEL%3BTYPE%3DCELL%3A6145920918%0AEMAIL%3AChoyles%40gmail.com%0AEND%3AVCARD" download="Craig_Hoyles.vcf">
+    Save Contact
+  </a>
+</div>
+
+</body>
+</html>
